@@ -6,16 +6,16 @@ from langdetect import detect
 from googletrans import Translator
 
 
-file_path = os.path.join(os.path.dirname(__file__), 'api.json')
+#file_path = os.path.join(os.path.dirname(__file__), 'api.json')
 
 # Defines a translator for googletrans 
 translator = Translator()
 
-with open(file_path, 'r') as file:
-    data = json.load(file)
+"""with open(file_path, 'r') as file:
+    data = json.load(file)"""
 
 # Extract the API key
-api_key = data['api_key']
+#api_key = data['api_key']
 
 
 purpose = """I am designed to demonstrate the integration of <strong class='text-warning'>JavaScript</strong> and <strong class='text-warning'>Python</strong> integration within an <strong class='text-warning'>HTML</strong> file."""
@@ -41,10 +41,10 @@ def chatbot(request):
         lang = detect(user_query)
 
         # Construct the API request to Wit.ai
-        api_token = api_key
+        #api_token = api_key
         url = "https://api.wit.ai/message"
         headers = {
-        "Authorization": f"Bearer {api_token}"
+        #"Authorization": f"Bearer {api_token}"
         }
         params = {
         "v": "20240701",  # API version

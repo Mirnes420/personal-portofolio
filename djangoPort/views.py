@@ -5,6 +5,7 @@ from django.contrib import messages
 
 # main view
 def portfolio(request):
+    print("hello")
     return render(request, "index.html")
 
 # send email logic
